@@ -1,0 +1,24 @@
+nav ul {
+  display: flex;
+  background-color: blanchedalmond;
+  margin-block-start: 0;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li {
+  list-style-type: none;
+  margin-right: 16px;
+}
+
+main {
+  margin: 0 1em;
+}
+
+.callout {
+  padding: 1em 2em;
+  background-color: #e30022;
+  border: thick solid #fcc200;
+  border-radius: 5px;
+  cursor: pointer;
+}

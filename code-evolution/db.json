@@ -1,0 +1,49 @@
+{
+  "superheroes": [
+    {
+      "id": 1,
+      "name": "Iron man",
+      "alterEgo": "Tony Stark"
+    },
+    {
+      "id": 2,
+      "name": "Hulk",
+      "alterEgo": "Bruce Banner"
+    },
+    {
+      "id": 3,
+      "name": "Captain America",
+      "alterEgo": "Steve Rogers"
+    },
+    {
+      "id": 4,
+      "name": "Thor",
+      "alterEgo": "Thor Odenson"
+    },
+    {
+      "id": 5,
+      "name": "Black Widow",
+      "alterEgo": "Natasha Romanov"
+    },
+    {
+      "id": 6,
+      "name": "Haweye",
+      "alterEgo": "Clint Barton"
+    }
+  ],
+
+  "friends": [
+    {
+      "id": 1,
+      "name": "Ms. Chanadler Bong"
+    },
+    {
+      "id": 2,
+      "name": "joey Tribbiani"
+    },
+    {
+      "id": 3,
+      "name": "Regina Phalangi"
+    }
+  ]
+}
