@@ -1,9 +1,8 @@
-import axios from 'axios';
 import React, { Fragment } from 'react';
 import { useInfiniteQuery } from 'react-query';
+import { axios } from '../lib/axios';
 
-const fetchColors = ({ pageParam = 1 }) =>
-  axios.get(`http://localhost:4000/colors?_limit=2&_page=${pageParam}`);
+const fetchColors = ({ pageParam = 1 }) => axios.get(`/colors?_limit=2&_page=${pageParam}`);
 
 export default function InfiniteQueries() {
   const {
@@ -27,13 +26,13 @@ export default function InfiniteQueries() {
 
       {isLoading && <h3>Loading...</h3>}
 
-      {isError && <h3>ERROR: {error.response?.data?.message || error.message}</h3>}
+      {isError && <h3>ERROR: {error}</h3>}
 
       {data && (
         <>
           {data.pages.map((page, i) => (
             <Fragment key={i}>
-              {page.data.map((color) => (
+              {page.map((color) => (
                 <h3 key={color.id}>
                   {color.id}. {color.label}
                 </h3>

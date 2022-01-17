@@ -1,9 +1,9 @@
-import axios from 'axios';
 import { useState } from 'react';
 import { useQuery } from 'react-query';
+import { axios } from '../lib/axios';
 
 const fetchColors = (page) =>
-  axios.get('http://localhost:4000/colors', {
+  axios.get('/colors', {
     params: {
       _limit: 2,
       _page: page
@@ -32,7 +32,7 @@ export default function PaginatedQueries() {
 
       {data && (
         <>
-          {data.data.map((item) => (
+          {data.map((item) => (
             <h3 key={item.id}>
               {item.id}. {item.label}
             </h3>

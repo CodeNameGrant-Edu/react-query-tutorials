@@ -1,9 +1,9 @@
-import axios from 'axios';
 import React from 'react';
 import { useQuery } from 'react-query';
+import { axios } from '../lib/axios';
 
-const fetchHeroes = () => axios.get('http://localhost:4000/superheroes');
-const fetchFriends = () => axios.get('http://localhost:4000/friends');
+const fetchHeroes = () => axios.get('/superheroes');
+const fetchFriends = () => axios.get('/friends');
 
 const select = (res) => res.data;
 

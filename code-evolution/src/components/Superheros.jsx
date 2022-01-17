@@ -1,5 +1,5 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { axios } from '../lib/axios';
 
 export default function Superheros() {
   const [isLoading, setIsLoading] = useState(true);
@@ -8,12 +8,10 @@ export default function Superheros() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:4000/superheroes')
-      .then((res) => {
-        setData(res.data);
-      })
+      .get('/superheroes')
+      .then(setData)
       .catch((error) => {
-        setError(error.response?.data?.message || error.message);
+        setError(error);
       })
       .finally(() => setIsLoading(false));
   }, []);

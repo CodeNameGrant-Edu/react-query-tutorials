@@ -1,10 +1,8 @@
-import axios from 'axios';
 import React from 'react';
 import { useQueries } from 'react-query';
+import { axios } from '../lib/axios';
 
-const fetchHeroes = (id) => axios.get(`http://localhost:4000/superheroes/${id}`);
-
-const select = (res) => res.data;
+const fetchHeroes = (id) => axios.get(`/superheroes/${id}`);
 
 export default function DynamicParallelQueries({ heroIds }) {
   const heroQueries = useQueries(
@@ -12,8 +10,7 @@ export default function DynamicParallelQueries({ heroIds }) {
       queryKey: ['super-hero', id],
       queryFn: () => fetchHeroes(id),
 
-      staleTime: 60000,
-      select
+      staleTime: 60000
     }))
   );
 

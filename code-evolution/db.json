@@ -29,9 +29,68 @@
       "id": 6,
       "name": "Haweye",
       "alterEgo": "Clint Barton"
+    },
+    {
+      "name": "Peter Quill",
+      "alterEgo": "Starlord",
+      "id": 7
+    },
+    {
+      "name": "Peter Parker",
+      "alterEgo": "Spiderman",
+      "id": 8
+    },
+    {
+      "name": "King T'Chala",
+      "alterEgo": "Black Panther",
+      "id": 9
+    },
+    {
+      "name": "The Vision",
+      "alterEgo": "N/A",
+      "id": 10
+    },
+    {
+      "name": "Captain Rhodes",
+      "alterEgo": "War Machine",
+      "id": 11
+    },
+    {
+      "name": "Steven Strange",
+      "alterEgo": "Dr. Strange",
+      "id": 12
+    },
+    {
+      "name": "???",
+      "alterEgo": "Spiderman",
+      "id": 13
+    },
+    {
+      "name": "Wong",
+      "alterEgo": "n/a",
+      "id": 14
+    },
+    {
+      "name": "Carol Danvers",
+      "alterEgo": "Captain Marvel",
+      "id": 15
+    },
+    {
+      "name": "Drax",
+      "alterEgo": "None",
+      "id": 16
+    },
+    {
+      "name": "Rocket",
+      "alterEgo": "N/A",
+      "id": 17
+    },
+    {
+      "name": "asd",
+      "alterEgo": "asd",
+      "id": 18
     }
   ],
-
   "friends": [
     {
       "id": 1,
@@ -55,16 +114,41 @@
   "channels": [
     {
       "id": "codenamegrant",
-      "courses": ["Javascript", "React", "React-Query"]
+      "courses": [
+        "Javascript",
+        "React",
+        "React-Query"
+      ]
     }
   ],
   "colors": [
-    { "id": 1, "label": "Red" },
-    { "id": 2, "label": "Orange" },
-    { "id": 3, "label": "Yellow" },
-    { "id": 4, "label": "Green" },
-    { "id": 5, "label": "Blue" },
-    { "id": 6, "label": "Indigo" },
-    { "id": 7, "label": "Violet" }
+    {
+      "id": 1,
+      "label": "Red"
+    },
+    {
+      "id": 2,
+      "label": "Orange"
+    },
+    {
+      "id": 3,
+      "label": "Yellow"
+    },
+    {
+      "id": 4,
+      "label": "Green"
+    },
+    {
+      "id": 5,
+      "label": "Blue"
+    },
+    {
+      "id": 6,
+      "label": "Indigo"
+    },
+    {
+      "id": 7,
+      "label": "Violet"
+    }
   ]
 }

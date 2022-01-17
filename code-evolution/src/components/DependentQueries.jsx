@@ -1,15 +1,15 @@
-import axios from 'axios';
 import React from 'react';
 import { useQuery } from 'react-query';
+import { axios } from '../lib/axios';
 
-const fetchUser = (id) => axios.get(`http://localhost:4000/users/${id}`);
-const fetchChannel = (id) => axios.get(`http://localhost:4000/channels/${id}`);
+const fetchUser = (id) => axios.get(`/users/${id}`);
+const fetchChannel = (id) => axios.get(`/channels/${id}`);
 
 export default function DependentQueries({ email }) {
   const { data: user } = useQuery(['users', email], () => fetchUser(email), {
     onSuccess: () => console.log('User Retrieved')
   });
-  const channelId = user?.data.channelId;
+  const channelId = user?.channelId;
 
   const { isSuccess, data: channel } = useQuery(
     ['channels', channelId],
@@ -25,7 +25,7 @@ export default function DependentQueries({ email }) {
   return (
     <>
       <h4>Courses</h4>
-      <ul>{isSuccess && channel.data.courses.map((item) => <li key={item}>{item}</li>)}</ul>
+      <ul>{isSuccess && channel.courses.map((item) => <li key={item}>{item}</li>)}</ul>
     </>
   );
 }
