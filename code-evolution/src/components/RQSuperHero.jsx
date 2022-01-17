@@ -1,7 +1,6 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import useSuperhero from '../hooks/useSuperhero';
-import { Link } from 'react-router-dom';
 
 export default function RQSuperHero() {
   const { id } = useParams();
@@ -17,8 +16,9 @@ export default function RQSuperHero() {
         <>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5em' }}>
             <h2>{data.name}</h2>
-            <h4>({data.alterEgo})</h4>
+            {data.alterEgo && <h4>({data.alterEgo})</h4>}
           </div>
+
           <Link to="/rq-super-heroes">Clear Selection</Link>
         </>
       )}
